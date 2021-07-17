@@ -1,0 +1,122 @@
+@media screen and (max-width: 1200px) {
+    .row {
+        max-width: 100%;
+        margin: auto;
+        margin: 0 30px ;
+    }
+    .close-btn ion-icon {
+        top: 42px;
+        right: -163px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .about-grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .paul{
+        width: 70%;
+        display: block;
+        margin: auto;
+    }
+    .grid-process-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 12px;
+    }
+    .grid-portfolio-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: minmax(250px, auto);
+        grid-gap: 10px;
+    }
+    .description {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navber-menu {
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .grid-esperince-contant {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .grid-infomation-contant {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .grid-portfolio-content {
+        grid-auto-rows: auto;
+    }
+    .grid-portfolio-items {
+        height: auto;
+    }
+    .portfolio-filter button {
+        margin: 4px 5px;
+    }
+}
+
+@media screen and (max-width: 376px){
+    .grid-process-container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .grid-portfolio-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: minmax(250px, auto);
+    }
+    .grid-testimonial-content {
+        display: grid;
+        grid-template-columns: 1fr ;
+    }
+    #testimonial{
+        background-position: center;
+    }
+    h1{
+        font-size: 400%;
+    }
+    .hero-text-box span {
+        font-size: 170%;
+    }
+}
+@media screen and (max-width: 481px){
+    .navber-menu {
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    #hero h1 {
+        font-size: 520%;
+    }
+    .hero-text-box span {
+        font-size: 205%;
+    }
+    .grid-process-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 12px;
+    }
+}
+@media screen and (max-width: 320px){
+    .navber-menu {
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    #hero h1 {
+        font-size: 405%;
+    }
+    .hero-text-box span {
+        font-size: 144%;
+    }
+}

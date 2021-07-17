@@ -1,0 +1,537 @@
+
+/*============================================================
+ Template Name: Paul Lapkin -portfolio Template
+ Template Url:
+ Description: An Awesome portfolio Template
+ Author: Farhan Sharif
+ Author URL: Farhan.me
+ Support:FarhanSharif.com
+ Vertion: 1.0
+ ===========================================================*/
+
+ /*===========================================================
+            CSS INDEX
+            ========
+            1.COMMON
+            2.HERO
+ ===========================================================*/
+ /*===========================================================
+            1.COMMON
+ ===========================================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,
+body{
+    background-color: #fff;
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+}
+a,
+a:hover{
+    text-decoration: none;
+}
+.btn:hover, .btn:active {
+    text-decoration: none;
+}
+/* REUSEABLE COMPUNENT */
+.row{
+    max-width: 1180px;
+    margin: auto;
+}
+#hero h1{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 650%;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+h2,h3,h4{
+    font-family: 'Raleway', sans-serif;
+}
+h2{
+
+    font-size: 400%;
+    font-weight: 400;
+    margin-bottom: 38px;
+}
+
+section{
+    padding: 120px 0;
+}
+.btn:link,
+.btn:visited,
+.btn{
+    width: 203px;
+    background: #ff2b4a;
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    font-size: 160%;
+    padding: 15px 0;
+    border: 2px solid #ff2b4a;
+    transition: .5s;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.btn:hover,
+.btn:active{
+    background: transparent;
+    color: #ff2b4a;
+}
+/*===========================================================
+            2.HERO
+ ===========================================================*/
+ #hero{
+     height: 100vh;
+     background: url(../css/img/man.jpg);
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: cover;
+     position: relative;
+     z-index: 9;
+
+     /* clip-path: polygon(100% 1%, 99% 98%, 70% 89%, 0 99%, 0 1%); */
+ }
+ #hero::after{
+     content: "";
+     top: 0;
+     right: 0;
+     background: rgba(0, 0, 0, 0.6);
+     height: 100%;
+     width: 100%;
+     position: absolute;
+     z-index: -1;
+ }
+ .logo{
+     float: left;
+     height: 45px;
+     margin-top: 45px;
+ }
+ .nav-icon{
+     color: #fff;
+ }
+ .nav-icon i{
+     font-size: 40px;
+     margin-top: 45px;
+     float: right;
+     /* border: 1px solid #fff; */
+ }
+ .menu{
+     float: right;
+     margin: 35px -49px;
+     cursor: pointer;
+ }
+ .other-menu{
+     max-width: 1180px;
+     background: #000;
+ }
+
+ .hero-text-box {
+    width: 1180px;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+h1::before{
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: #fff;
+}
+h1::after{
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: #fff;
+}
+.hero-text-box span{
+    font-size: 230%;
+    color: #fff;
+    margin: 20px;
+    display: block;
+
+}
+#hero .scroll-down{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 45px;
+    margin: auto;
+    width: 30px;
+}
+.scroll-down a ion-icon {
+    font-size: 400%;
+    color: #fff;
+    position: relative;
+    animation: 2s arrow infinite ease;
+}
+@keyframes arrow {
+    0% {
+        top: 10px;
+    }
+    50% {
+        top: 30px;
+    }
+    100% {
+        top: 10px;
+    }
+}
+
+/* HAMBERGER MENU  */
+
+.container-menu{
+    width: 100%;
+    height: 0;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+.close-btn ion-icon {
+    position: absolute;
+    top: 45px;
+    right: 170px;
+    color: #fff;
+    font-size: 500%;
+    border: 2px solid #fff;
+    margin: -5px 185px;
+}
+.close-btn:hover ion-icon{
+    cursor: pointer;
+}
+.navber-menu{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.navber-menu ul li{
+    margin-bottom: 20px;
+}
+
+.navber-menu ul li a{
+    color: #fff;
+    font-size: 280%;
+    transition: 0.3s;
+    text-transform: uppercase;
+
+
+}
+.navber-menu ul li:hover a{
+    text-decoration: none;
+    font-size: 300%;
+    color: #ff2b4a;
+}
+
+
+/*===========================================================
+            3.ABOUT
+ ===========================================================*/
+
+.about-grid-container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 60px;
+}
+.paul{
+    width: 100%;
+    clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+}
+
+.intro{
+    font-size: 250%;
+    color: #222;
+    font-weight: 700;
+}
+.description{
+    font-size: 180%;
+    color: #222;
+    font-weight: 700;
+    margin: 30px 0;
+    width: 90%;
+}
+
+        /* PROCESS */
+
+#process{
+    background: #f6f6f6;
+}
+#process h4{
+    color: #fff;
+    font-weight: 700;
+}
+.section-title{
+    text-align: center;
+}
+.section-title p{
+    font-size: 160%;
+    margin-bottom: 60px;
+}
+.grid-process-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 12px;
+}
+.grid-procee-item{
+    color: #fff;
+    text-align: center;
+    padding: 80px 0;
+}
+.grid-procee-item:nth-child(1) {
+    background: #10c6fc;
+}
+.grid-procee-item:nth-child(2) {
+    background: #835aeb;
+}
+.grid-procee-item:nth-child(3) {
+    background: #002453;
+}
+.grid-procee-item:nth-child(4) {
+    background: #ff2b4a;
+}
+.grid-procee-item h4{
+    font-size: 160%;
+    margin-top: 48px;
+    text-transform: uppercase;
+}
+
+/* EXPERIENS */
+
+#experiens{
+    background: url(../css/img/pexels-andrea-piacquadio-914931.jpg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;background-attachment: fixed;
+}
+.grid-esperince-contant{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 12px;
+}
+
+.grid-job-item,
+.grid-education-item{
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 65px 45px;
+    /* width: 500px; */
+}
+.grid-job-item h3,
+.grid-education-item h3{
+    font-size: 260%;
+    margin-bottom: 55px;
+    color: #fff;
+    margin: 0;
+}
+.grid-job-item h4,
+.grid-education-item h4{
+    font-size: 160%;
+    margin-bottom: 15px;
+    color: #fff;
+}
+.grid-job-item span,
+.grid-education-item span{
+    font-size: 160%;
+    margin-bottom: 15px;
+    display: inline-block;
+    color: #d7d9de;
+}
+.grid-job-item p,
+.grid-education-item p{
+    font-size: 160%;
+    line-height: 2;
+}
+.grid-job-item hr,
+.grid-education-item hr{
+    border: 0;
+    border-bottom: 1px solid #fff;
+    margin: 25px 0;
+}
+
+/* PORTFOLIO */
+
+.grid-portfolio-content{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(250px, auto);
+    grid-gap: 10px;
+}
+.img{
+    height: 250px;
+     width: 100%; 
+}
+
+.grid-portfolio-items:nth-child(5) {
+    grid-column: 1/3;
+}
+.portfolio-filter{
+    text-align: center;
+    margin-bottom: 15px;
+}
+.portfolio-filter button {
+    border: 1px solid #000;
+    padding: 5px 10px;
+    background: #000;
+    color: #fff;
+    font-size: 160%;
+    margin: 0 5px;
+    transition: 0.5s;
+}
+.portfolio-filter button:hover {
+    cursor: pointer;
+    background: #ff2b4a;
+    border-color: #ff2b4a;
+}
+.portfolio-filter .mixitup-control-active{
+    background: #ff2b4a;
+    border-color: #ff2b4a;
+}
+
+
+/* TESTIMONIAL */
+
+#testimonial{
+    background: url(../css/img/content.jpg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.grid-testimonial-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.testimonial-text{
+    font-size: 180%;
+    margin: 70px 0;
+    line-height: 2.5rem;
+}
+.signeture img{
+    margin-bottom: 40px;
+    font-size: 200%;
+}
+#testimonial h4{
+    font-size: 180%;
+    margin-bottom: 20px;
+}
+#testimonial span{
+    font-size: 180%;
+}
+
+/* INFORMATION */
+
+#infomation{
+    background: url(./img/girl.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.grid-infomation-contant{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+.grid-infomation-items:nth-child(1) {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 45px 30px;
+}
+.grid-infomation-items h3,
+.grid-address-items h3{
+    color: #fff;
+    font-size: 280%;
+    margin-bottom: 40px;
+}
+.grid-infomation-items input[type="text"],
+.grid-infomation-items input[type="email"],
+.grid-infomation-items input[type="text"],
+.grid-infomation-items textarea{
+    width: 100%;
+    padding: 10px;
+    font-size: 160%;
+    margin-bottom: 30px;
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+}
+.btn-button{
+    text-align: right;
+}
+
+.grid-address-contant{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+.grid-address-items{
+    background: rgba(0, 0, 0, 0.7);
+    padding: 45px 30px;
+}
+.grid-address-items p{
+    color: #fff;
+    font-size: 160%;
+    line-height: 2.1;
+}
+.uk-animation-shake{
+    animation-duration: 0.5s;
+}
+/* FOOTER */
+#footer{
+    background: #000;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.social-icon ul li{
+    display: inline-block;
+}
+.social-icon ul li a{
+    color: #fff;
+    font-size: 200%;
+    border-right: 1px solid #fff;
+    padding: 0 10px;
+}
+.social-icon ul li a:hover{
+    color: #ff2b4a;
+}
+#footer p{
+    color: #fff;
+    font-size: 160%;
+    margin-top: 25px;
+}
+/* TO-TOP */
+.to-top .uk-totop {
+    padding: 5px;
+    color: #fff;
+    transition: 0.5s;
+    border: 1px solid #fff;
+    padding: 10px 5px;
+}
+.to-top .uk-totop:hover {
+    background: #ff2b4a;
+    color: #fff;
+    border-color: #ff2b4a;
+}
+.uk-lightbox-toolbar {
+    font-size: 180%;
+}
